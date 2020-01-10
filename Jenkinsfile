@@ -5,7 +5,7 @@ pipeline {
         stage('Example') {
             steps {
                 echo 'sending helloWorld'
-                publishEvent jsonEvent('{"eventName":"helloWorld"}'), verbose: true
+                publishEvent event:jsonEvent('{"eventName":"helloWorld"}'), verbose: true
             }
         }
     }
