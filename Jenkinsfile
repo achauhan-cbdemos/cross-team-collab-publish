@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                echo 'sending helloWorld'
-                publishEvent jsonEvent('{"eventName":"helloWorld"}')
+                echo 'new maven artifact got published'
+                publishEvent simpleEvent('com.example:my-jar:0.5-SNAPSHOT:jar')
             }
         }
     }
